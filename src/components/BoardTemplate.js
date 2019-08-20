@@ -2,6 +2,8 @@ import React from 'react';
 import './BoardTemplate.css';
 import Menu from './Topnav/Menu.js'
 import Boardcontainer from './Middle/Middleleft/Boardcontainer.js';
+import Mainimage from './Middle/Middleright/Mainimage.js';
+import Button from './Middle/Middleright/Button';
 
 class BoardTemplate extends React.Component{
     render(){
@@ -24,6 +26,7 @@ class BoardTemplate extends React.Component{
                     </div> 
                 </div>
                 <div id='middle-right'>
+                    <Mainimage />
                 </div>
             </div>
             <div id="footer">
