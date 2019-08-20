@@ -3,7 +3,7 @@ import './Menu.css';
 
 class Menu extends React.Component{
     render() {
-        return <a className='Menu' href='#' id={this.props.id}>{this.props.menu}</a>
+        return <a className='Menu' id={this.props.id} href='#'>{this.props.menu}</a>
     }
 }
 

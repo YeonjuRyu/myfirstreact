@@ -1,6 +1,5 @@
 import React from 'react';
 import './Boardlist.css';
-import './BoardTemplate.js';
 
 class Boardlist extends React.Component{
  
