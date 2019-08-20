@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial;
+    padding: 10px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+      width: 100%;
+    }
+  }
+
+  
+  #topnav {
+    overflow: hidden;
+    background-color: #333;
+    height: 50px;
+    display: block;
+    padding:10px;
+  }
+  
+  #footer {
+    background-color: #333;
+    color: #f2f2f2;
+    padding: 16px;
+    text-align: center;
+    font-style: bold;
+    font-weight: 100;
+    height: 50px
+  }
+  
+  #middle {
+    overflow: hidden;
+    background-color: white;
+    height: auto;
+    padding: 20px;
+  }
+
+  #middle-left {
+    width: 30%;
+  }
+
+  #middle-right {
+    width: 70%;
+  }

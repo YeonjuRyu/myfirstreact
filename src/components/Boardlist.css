@@ -1,0 +1,38 @@
+div#middle-left{
+    max-width: 100%;
+ 	height: auto;
+}
+
+#middle-left ul {
+    clear: left;
+    margin: 0;
+    padding : 0px 0px 0px 0px; /*위 왼 아래 오*/
+    list-style-type: none;
+    border:2px solid #e6e6e6;
+    border-bottom:none;
+    border-radius:0.5em;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    position:relative;
+
+}
+
+#middle-left li {
+    max-width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #e6e6e6;
+    border-radius:0.5em;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    padding : 15px 0px 10px 20px;
+}
+
+#middle-left a {
+    color: #4da6ff;
+    text-decoration: none;
+}
+
+#middle-left a:hover {
+    color: #003399;
+    text-decoration: underline;
+}
