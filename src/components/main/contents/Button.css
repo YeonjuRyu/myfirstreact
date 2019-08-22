@@ -12,9 +12,6 @@
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
   }
-  #button1:hover, #button1:active {
-    background-color: green;
-  }
   /*삭제 버튼*/
   #button2{
     color: white;
@@ -29,6 +26,18 @@
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
   }
-  #button2:hover, #button2:active {
-    background-color: red;
-  }  
+
+  /*수정 버튼*/
+  #button3{
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: orange;
+    border-radius:0.5em;
+    margin:0px;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+  }

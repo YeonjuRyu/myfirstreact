@@ -1,9 +1,9 @@
-div#middle-left{
+div#menu{
     max-width: 100%;
  	height: auto;
 }
 
-#middle-left ul {
+#menu ul#category {
     clear: left;
     margin: 0;
     padding : 0px 0px 0px 0px; /*위 왼 아래 오*/
@@ -17,22 +17,27 @@ div#middle-left{
 
 }
 
-#middle-left li {
+#menu li {
+    clear:center;
     max-width: 100%;
     height: 50px;
     border-bottom: 2px solid #e6e6e6;
     border-radius:0.5em;
     -moz-border-radius: 0.3em;
     -webkit-border-radius: 0.3em;
-    padding : 15px 0px 10px 20px;
+    padding : 15px 0px 0px 0px;
+    position:relative;
 }
 
-#middle-left a {
+#menu ul#category a {
     color: #4da6ff;
+    text-align: center;
     text-decoration: none;
+    padding : 15px 0px 0px 35px;
+    position:relative;
 }
 
-#middle-left a:hover {
+#menu a:hover {
     color: #003399;
     text-decoration: underline;
 }

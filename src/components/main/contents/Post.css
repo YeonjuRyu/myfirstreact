@@ -1,0 +1,63 @@
+div#post{
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    border: none;
+}
+
+#post ul{
+    max-width: 100%;
+    height: auto;
+    list-style-type: none;
+}
+
+#post #post_title{
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0px;
+    padding : 5px 10px 0px 5px;
+    font-size: 30px;
+    list-style-type: none;
+}
+
+#post #post_user_name{
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid gray;
+    margin: 10px 0px;
+    padding : 5px 0px 10px 5px;
+    font-size: 18px;
+    list-style-type: none;
+    color: #4da6ff;
+}
+
+#post #post_reg_date{
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid gray;
+    margin: 10px 0px;
+    padding : 10px 10px 10px 5px;
+    font-size: 15px;
+    color: #999999;
+    list-style-type: none;
+  }
+
+#post #post_content{
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0px;
+    padding : 5px 10px 10px 5px;
+    font-size: 18px;
+    color: #999999;
+    list-style-type: none;
+  }
+  
+#post  #post_reg_ip{
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0px;
+    padding : 5px;
+    font-size: 15px;
+    color:#999999;
+    list-style-type: none;
+  }
