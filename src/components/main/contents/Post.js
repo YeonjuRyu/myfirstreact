@@ -18,7 +18,7 @@ class Post extends React.Component{
     componentDidMount(){
         this._isMounted = true;
         var parsedid = this.props.match.params.id;
-        fetch('http://27.1.60.24:9900/board/post/'+parsedid)
+        fetch('http://127.0.0.1:3000/board/post/'+parsedid)
         .then((res)=>{res.json()
         .then((data)=>{this.setState({post: data.postDetail})
         })
@@ -27,7 +27,7 @@ class Post extends React.Component{
 
     componentDidUpdate(){
         var parsedid = this.props.match.params.id;
-        fetch('http://27.1.60.24:9900/board/post/'+parsedid)
+        fetch('http://127.0.0.1:3000/board/post/'+parsedid)
         .then((res)=>{res.json()
         .then((data)=>{this.setState({post: data.postDetail})
         })

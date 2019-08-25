@@ -18,7 +18,7 @@ class Post_summary extends React.Component {
     componentDidMount(){
         this._isMounted = true;
         var parsedid = this.props.match.params.id;
-        fetch('http://27.1.60.24:9900/board/postList/'+parsedid)
+        fetch('http://127.0.0.1:3000/board/postList/'+parsedid)
         .then((res)=>{res.json()
         .then((data)=>{this.setState({postlist: data.postList})
         })
@@ -27,7 +27,7 @@ class Post_summary extends React.Component {
 
     componentDidUpdate(){
         var parsedid = this.props.match.params.id;
-        fetch('http://27.1.60.24:9900/board/postList/'+parsedid)
+        fetch('http://127.0.0.1:3000/board/postList/'+parsedid)
         .then((res)=>{res.json()
         .then((data)=>{this.setState({postlist: data.postList})
         })
@@ -42,13 +42,13 @@ class Post_summary extends React.Component {
     render(){
             return(
                 <ul id='post-summary'>
-                    <form action="27.1.60.24:9900/board/deletePost" method="POST">
+                    <form action="http://127.0.0.1:3000/deleted" method="POST">
                     <div id='title'>게시글</div>
                     {
                         this.state.postlist ?
                         this.state.postlist.map((item) =>
                         <li>
-                            <input type="checkbox" name="postId" value={item.id} ></input>
+                            <input type="checkbox" name="postlist" value={item.id} ></input>
                             <Link to = {"/post/"+item.id}>{item.post_title}</Link>
                             <br></br><br></br>
                             <p> 등록일 : {item.post_reg_date} / IP: {item.post_reg_ip}</p>
@@ -58,7 +58,7 @@ class Post_summary extends React.Component {
                         <li></li>
                     }
                         <li>
-                            <input type="submit"></input>
+                            <input type="submit" value="삭제 완료"></input>
                         </li>
                     </form>
                 </ul>

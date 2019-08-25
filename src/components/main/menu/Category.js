@@ -17,7 +17,7 @@ class Category extends React.Component{
 
     componentDidMount(){
         this._isMounted = true;
-        fetch('http://27.1.60.24:9900/board/boardList')
+        fetch('http://127.0.0.1:3000/boardList')
         .then((res)=>{res.json()
         .then((data)=>{this.setState({boardlist: data.boardList})
         })
