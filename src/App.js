@@ -8,6 +8,7 @@ import Mainimage from './components/main/contents/Mainimage.js';
 import Post_summary from './components/main/contents/Post_summary.js';
 import Post from './components/main/contents/Post.js';
 import Post_write from './components/main/contents/Post_write.js';
+import Post_delete from './components/main/contents/Post_delete.js'
 //서식
 import './App.css';
 
@@ -39,6 +40,7 @@ class App extends React.Component{
                 <Route exact path= '/board/:id' component={Post_summary}/>
                 <Route exact path= '/post/:id' component={Post}/>
                 <Route exact path= '/board/writepost/:id' component={Post_write}/>
+                <Route exact path= '/board/deletepost/:id' component={Post_delete}/>
                 </Switch>
                 </div>
             </div>

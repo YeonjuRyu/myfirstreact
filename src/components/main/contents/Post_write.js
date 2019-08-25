@@ -26,7 +26,7 @@ class Post_write extends React.Component{
                   <tr>
                     <th>내용: </th>
                       <td><textarea colSpan="10" placeholder="내용을 입력하세요. " name="content" className="form-control"></textarea></td>
-                      <input type="hidden" id="post_reg_ip" name="ip"></input>
+                      <input type="hidden" id="post_reg_ip" name="ip" value="Undefine"></input>
                   </tr>
                   <tr>
                     <td colSpan="2">

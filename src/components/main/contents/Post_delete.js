@@ -42,11 +42,13 @@ class Post_summary extends React.Component {
     render(){
             return(
                 <ul id='post-summary'>
+                    <form action="27.1.60.24:9900/board/deletePost" method="POST">
                     <div id='title'>게시글</div>
                     {
                         this.state.postlist ?
                         this.state.postlist.map((item) =>
                         <li>
+                            <input type="checkbox" name="postId" value={item.id} ></input>
                             <Link to = {"/post/"+item.id}>{item.post_title}</Link>
                             <br></br><br></br>
                             <p> 등록일 : {item.post_reg_date} / IP: {item.post_reg_ip}</p>
@@ -56,10 +58,9 @@ class Post_summary extends React.Component {
                         <li></li>
                     }
                         <li>
-                            <Link to = {'/board/writepost/'+this.props.match.params.id}><Button id='button1' value='글쓰기'/></Link>
-                            <Link to = {'/board/deletepost/'+this.props.match.params.id}><Button id='button2' value='삭제'/></Link>
+                            <input type="submit"></input>
                         </li>
-                    
+                    </form>
                 </ul>
             )
     }

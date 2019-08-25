@@ -10,7 +10,7 @@ class Button extends React.Component{
 
     render(){
         return(
-            <input type='button' id={this.props.id} value={this.props.value} ></input>
+            <input type='button' id={this.props.id} value={this.props.value}></input>
         )
     }
 }

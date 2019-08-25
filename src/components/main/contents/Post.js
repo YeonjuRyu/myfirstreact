@@ -56,7 +56,7 @@ class Post extends React.Component{
                                 <p id='post_content'>{this.state.post.post_content}</p>
                             </li>
                             <li>
-                                <p id='post_reg_ip'>{this.state.post.post_reg_ip}</p>
+                                <p id='post_reg_ip'></p>
                             </li>
                             <li>
                                 <Link to ={'/board/modifypost/'+this.props.match.params.id}><Button id='button3' value='글 수정'/></Link>
