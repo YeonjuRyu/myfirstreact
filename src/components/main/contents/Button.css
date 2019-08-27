@@ -8,7 +8,7 @@
     display: inline-block;
     background-color: green;
     border-radius:0.5em;
-    margin:0px;
+    margin:0px;   /* ks: css에서 0px라고 하신 부분들은 0px 그대로 사용하셔도 되지만, 그냥 0이라고 적어주셔도 됩니다. px도 치기 귀찮잖아요ㅎㅎ */
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
   }

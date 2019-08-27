@@ -28,6 +28,7 @@ div#footer {
   color: #f2f2f2;
   padding: 16px;
   text-align: center;
+  /* TODO: ks: font-style에는 bold라는 값이 없습니다. bold 처리하시려면 font-weight 를 사용해 주세요. */
   font-style: bold;
   font-weight: 100;
   height: 50px

@@ -6,6 +6,7 @@ div#menu{
 #menu ul#category {
     clear: left;
     margin: 0;
+    /* ks: 순서는 시계방향입니다. top right bottom left입니다. */
     padding : 0px 0px 0px 0px; /*위 왼 아래 오*/
     list-style-type: none;
     border:2px solid #e6e6e6;
@@ -18,6 +19,7 @@ div#menu{
 }
 
 #menu li {
+    /* TODO: ks: clear에 center 속성은 없습니다. 어떤 의도인지 모르겠습니다만, 확인하시고, 적절히 고쳐주세요. */
     clear:center;
     max-width: 100%;
     height: 50px;

@@ -3,12 +3,16 @@ import Button from './Button.js';
 import { Link } from "react-router-dom";
 import './Post_summary.css';
 
+// TODO: ks: Post_summary.js 파일에도 Post_summary 클래스가 있습니다. 이름 적절히 수정해 주세요.
+// TODO: ks: Class 이름은 관습적으로 첫 글자가 대문자인 CamelCase를 사용합니다. PostSummary 정도로 수정하시면 좋을 것 같습니다.
+// 보통 클래스명과 파일 이름이 동일하면 인지 부하가 적습니다.
 class Post_summary extends React.Component {
 
     constructor(props){
         super(props);
 
         this.state={
+            // TODO: ks: camel case or underscored
             postlist:[]
         };
 
@@ -22,7 +26,8 @@ class Post_summary extends React.Component {
         .then((res)=>{res.json()
         .then((data)=>{this.setState({postlist: data.postList})
         })
-      }) 
+        // TODO: ks: fetch 실패했을 때에 대한 처리가 필요합니다. catch()를 사용해서 예외 상항을 잡아주세요.
+      })
     }
 
     componentDidUpdate(){
