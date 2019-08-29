@@ -1,15 +1,15 @@
 //import modules
 import React from 'react';
-import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 //import js files for routing
-import Topmenu from './components/header/Top-menu.js'
+import TopMenu from './components/header/TopMenu.js'
 import Category from './components/main/menu/Category.js'
-import Mainimage from './components/main/contents/Mainimage.js';
-import Post_summary from './components/main/contents/Post_summary.js';
+import MainImage from './components/main/contents/MainImage.js';
+import PostSummary from './components/main/contents/PostSummary.js';
 import Post from './components/main/contents/Post.js';
-import Post_write from './components/main/contents/Post_write.js';
-import Post_delete from './components/main/contents/Post_delete.js'
-import Post_modify from './components/main/contents/Post_modify.js'
+import PostWrite from './components/main/contents/PostWrite.js';
+import PostDelete from './components/main/contents/PostDelete.js'
+import PostModify from './components/main/contents/PostModify.js'
 //서식
 import './App.css';
 
@@ -20,11 +20,11 @@ class App extends React.Component{
         <div>
           <div id = "react-board">
             <div id = "header"> 
-                <Topmenu id='left' menu='React board'/>
-                <Topmenu id='right' href='/login' menu='로그인' />
-                <Topmenu id='right' href='/image' menu='사진' />
-                <Topmenu id='right' href='/intro' menu='소개' />
-                <Topmenu id='right' href='/posts' menu='게시글' />
+                <TopMenu id='left' menu='React board'/>
+                <TopMenu id='right' href='/login' menu='로그인' />
+                <TopMenu id='right' href='/image' menu='사진' />
+                <TopMenu id='right' href='/intro' menu='소개' />
+                <TopMenu id='right' href='/posts' menu='게시글' />
             </div>
             <div id="main">
                 <div id='menu'>
@@ -37,12 +37,12 @@ class App extends React.Component{
                 </div>
                 <div id='contents'>
                 <Switch>
-                <Route exact path='/' component={Mainimage} />
-                <Route exact path= '/board/:id' component={Post_summary}/>
+                <Route exact path='/' component={MainImage} />
+                <Route exact path= '/board/:id' component={PostSummary}/>
                 <Route exact path= '/post/:id' component={Post}/>
-                <Route exact path= '/board/writepost/:id' component={Post_write}/>
-                <Route exact path= '/board/deletepost/:id' component={Post_delete}/>
-                <Route exact path= '/board/modifypost/:id' component={Post_modify}/>
+                <Route exact path= '/board/writepost/:id' component={PostWrite}/>
+                <Route exact path= '/board/deletepost/:id' component={PostDelete}/>
+                <Route exact path= '/board/modifypost/:id' component={PostModify}/>
                 </Switch>
                 </div>
             </div>

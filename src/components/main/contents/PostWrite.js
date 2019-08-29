@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Post_write extends React.Component{
+class PostWrite extends React.Component{
 
     render(){
         return(
@@ -34,4 +34,4 @@ class Post_write extends React.Component{
     }
 }
 
-export default Post_write;
+export default PostWrite;

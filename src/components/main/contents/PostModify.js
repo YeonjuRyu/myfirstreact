@@ -1,9 +1,7 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './Post.css';
-import Button from './Button.js'
 
-class Post_modify extends React.Component{
+class PostModify extends React.Component{
 
     constructor(props){
         super(props);
@@ -68,4 +66,4 @@ class Post_modify extends React.Component{
     }
 }
 
-export default Post_modify;
+export default PostModify;

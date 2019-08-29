@@ -1,37 +1,46 @@
 import React from 'react';
 import Button from './Button.js';
 import { Link } from "react-router-dom";
-import './Post_summary.css';
+import './PostSummary.css';
 
-class Post_summary extends React.Component {
+class PostSummary extends React.Component {
 
     constructor(props){
         super(props);
 
         this.state={
-            postlist:[]
+            post_list:[]
         };
+
+        this.url = 'http://127.0.0.1:3000/board/postList/'
 
         this._isMounted = false;
     }
 
+    getdata(url){
+        fetch(url).then((res)=>{
+            res.json().then((data=>{
+                if(data.result="Ok"){
+                    this.setState({post_list: data.postList})
+                }
+                else if(data.result == "fail"){
+                    alert('error! reason is: ' + data.error)
+                }
+            }))
+        })
+    }
+
     componentDidMount(){
         this._isMounted = true;
-        var parsedid = this.props.match.params.id;
-        fetch('http://127.0.0.1:3000/board/postList/'+parsedid)
-        .then((res)=>{res.json()
-        .then((data)=>{this.setState({postlist: data.postList})
-        })
-      }) 
+        var parsed_id = this.props.match.params.id;
+        const url = this.url +parsed_id
+        this.getdata(url)
     }
 
     componentDidUpdate(){
-        var parsedid = this.props.match.params.id;
-        fetch('http://127.0.0.1:3000/board/postList/'+parsedid)
-        .then((res)=>{res.json()
-        .then((data)=>{this.setState({postlist: data.postList})
-        })
-      })
+        var parsed_id = this.props.match.params.id;
+        const url = this.url +parsed_id
+        this.getdata(url)
     }
 
     componentWillUnmount() {
@@ -44,8 +53,8 @@ class Post_summary extends React.Component {
                 <ul id='post-summary'>
                     <div id='title'>게시글</div>
                     {
-                        this.state.postlist ?
-                        this.state.postlist.map((item) =>
+                        this.state.post_list ?
+                        this.state.post_list.map((item) =>
                         <li>
                             <Link to = {"/post/"+item.id}>{item.post_title}</Link>
                             <br></br><br></br>
@@ -66,4 +75,4 @@ class Post_summary extends React.Component {
 }
 
 
-export default Post_summary;
+export default PostSummary;
